@@ -1,0 +1,66 @@
+<!-- upload.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMART FIT - AI-Driven Size Recommendation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background-color: #f8f9fa; }
+        .container {
+            max-width: 600px;
+            margin-top: 50px;
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        h2 { color: #007bff; text-align: center; margin-bottom: 30px; }
+        .btn-primary { background-color: #007bff; border: none; }
+        .btn-primary:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>SMART FIT - Size Recommendation</h2>
+        <form action="/upload-image" method="post" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select class="form-control" name="gender" id="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="height">Your Height (in inches):</label>
+                <input type="text" class="form-control" name="height" id="height" placeholder="e.g., 67 for 5'7''" required>
+            </div>
+            <div class="form-group">
+                <label for="weight">Your Weight (in lbs):</label>
+                <input type="text" class="form-control" name="weight" id="weight" placeholder="e.g., 130" required>
+            </div>
+            <div class="form-group">
+                <label for="ref_length">Reference Object Length (in inches):</label>
+                <input type="text" class="form-control" name="ref_length" id="ref_length" placeholder="e.g., 3.37 for credit card" required>
+            </div>
+            <div class="form-group">
+                <label for="ref_width">Reference Object Width (in inches):</label>
+                <input type="text" class="form-control" name="ref_width" id="ref_width" placeholder="e.g., 2.12 for credit card" required>
+            </div>
+            <div class="form-group">
+                <label for="image">Upload or Capture Full-Body Image:</label>
+                <input type="file" class="form-control-file" name="image" id="image" accept="image/*" capture="environment" required>
+                <small class="form-text text-muted">You can either upload an image or capture a new one using your device's camera.</small>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Upload and Get Recommendation</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
