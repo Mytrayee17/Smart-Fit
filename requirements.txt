@@ -3,3 +3,4 @@ mediapipe
 numpy
 Flask
 tensorflow
+torch
