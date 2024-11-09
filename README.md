@@ -15,6 +15,6 @@ run app.py
    cd smart-fit
 
 
-   we are unable to deploy it in vultr server 
+   we are unable to deploy it in vultr server we needmore guidence about the server deployment
 
 
