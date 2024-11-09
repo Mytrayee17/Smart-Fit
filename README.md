@@ -5,7 +5,16 @@ SMART FIT provides AI-powered size recommendations based on body measurements ex
 
 ## Setup Instructions
 
+install requirements.txt
+
+run app.py
+
 1. Clone the repository:
    ```bash
    git clone https://github.com/username/smart-fit.git
    cd smart-fit
+
+
+   we are unable to deploy it in vultr server 
+
+
